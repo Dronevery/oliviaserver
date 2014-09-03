@@ -1,0 +1,235 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+About	clientscript/main_menu.cs	/^	private bool About = false;$/;"	f	class:main_menu	file:
+Application	oliviaweb/main.py	/^from tornado.web import RequestHandler, Application, url$/;"	i
+BufferSize	clientscript/connect.cs	/^    public const int BufferSize = 256;$/;"	f	class:StateObject
+ClampAngle	clientscript/RTSCameraCon.cs	/^	static float ClampAngle (float angle,float min,float max)$/;"	m	class:RTSCameraCon	file:
+ConnectServer	clientscript/main_menu.cs	/^	private bool ConnectServer = false;$/;"	f	class:main_menu	file:
+ConnectServerWindow	clientscript/main_menu.cs	/^	void ConnectServerWindow(int windowID)$/;"	m	class:main_menu	file:
+Factory	gameserver.py	/^from twisted.internet.protocol import Factory, Protocol$/;"	i
+HelloHandler	oliviaweb/main.py	/^class HelloHandler(RequestHandler):$/;"	c
+Help	clientscript/main_menu.cs	/^	private bool Help = false;$/;"	f	class:main_menu	file:
+HorizSliderValue	clientscript/example.cs	/^	private float HorizSliderValue = 0.5f;$/;"	f	class:example	file:
+HorizSliderValue	clientscript/game0gui.cs	/^	private float HorizSliderValue = 0.5f;$/;"	f	class:game0gui	file:
+HorizSliderValue	clientscript/main_menu.cs	/^	private float HorizSliderValue = 0.5f;$/;"	f	class:main_menu	file:
+IOLoop	oliviaweb/main.py	/^from tornado.ioloop import IOLoop$/;"	i
+LateUpdate	clientscript/RTSCamera.js	/^function LateUpdate ()$/;"	f
+LateUpdate	clientscript/RTSCameraCon.cs	/^	void LateUpdate () {$/;"	m	class:RTSCameraCon	file:
+LineReceiver	gameserver.py	/^from twisted.protocols.basic import LineReceiver$/;"	i
+MyWindow0	clientscript/example.cs	/^	void MyWindow0 (int windowID) $/;"	m	class:example	file:
+MyWindow1	clientscript/example.cs	/^	void MyWindow1 (int windowID) $/;"	m	class:example	file:
+MyWindow1	clientscript/main_menu.cs	/^	void MyWindow1 (int windowID) $/;"	m	class:main_menu	file:
+OnGUI	clientscript/example.cs	/^	void OnGUI () {$/;"	m	class:example	file:
+OnGUI	clientscript/game0gui.cs	/^	void OnGUI () $/;"	m	class:game0gui	file:
+OnGUI	clientscript/main_menu.cs	/^	void OnGUI () {$/;"	m	class:main_menu	file:
+OnMouseDown	clientscript/scale.cs	/^    void OnMouseDown()$/;"	m	class:scale	file:
+OnTap	clientscript/scale.cs	/^    void OnTap(Gesture sender)$/;"	m	class:scale	file:
+PlaneWithTexture	clientscript/loadres.cs	/^	int PlaneWithTexture(int i,int j)$/;"	m	class:loadres	file:
+Protocol	gameserver.py	/^from twisted.internet.protocol import Factory, Protocol$/;"	i
+RTSCameraCon	clientscript/RTSCameraCon.cs	/^public class RTSCameraCon : MonoBehaviour {$/;"	c
+ReceiveCallback	clientscript/connect.cs	/^	private void ReceiveCallback(IAsyncResult ar)$/;"	m	class:connect	file:
+RequestHandler	oliviaweb/main.py	/^from tornado.web import RequestHandler, Application, url$/;"	i
+Sc	clientscript/game0gui.cs	/^	Vector2 Sc;$/;"	f	class:game0gui	file:
+Settings	clientscript/main_menu.cs	/^	private bool Settings = false;$/;"	f	class:main_menu	file:
+Start	clientscript/RTSCameraCon.cs	/^	void Start () {$/;"	m	class:RTSCameraCon	file:
+Start	clientscript/connect.cs	/^	void Start ()$/;"	m	class:connect	file:
+Start	clientscript/example.cs	/^	void Start () {$/;"	m	class:example	file:
+Start	clientscript/main_menu.cs	/^	void Start () {$/;"	m	class:main_menu	file:
+Start	clientscript/run.cs	/^	void Start () {$/;"	m	class:run	file:
+Start	clientscript/sc.cs	/^	void Start () {$/;"	m	class:sc	file:
+Start	clientscript/scale.cs	/^    void Start () {$/;"	m	class:scale	file:
+StartLoad	clientscript/loadres.cs	/^	IEnumerator StartLoad()$/;"	m	class:loadres	file:
+StateObject	clientscript/connect.cs	/^public class StateObject $/;"	c
+ToggleBTN	clientscript/example.cs	/^	private bool ToggleBTN = false;$/;"	f	class:example	file:
+ToggleBTN	clientscript/game0gui.cs	/^	private bool ToggleBTN = false;$/;"	f	class:game0gui	file:
+ToggleBTN	clientscript/main_menu.cs	/^	private bool ToggleBTN = false;$/;"	f	class:main_menu	file:
+TwistedIOLoop	main.py	/^from tornado.platform.twisted import TwistedIOLoop$/;"	i
+Update	clientscript/connect.cs	/^	void Update () $/;"	m	class:connect	file:
+Update	clientscript/loadres.cs	/^    void Update()$/;"	m	class:loadres	file:
+Update	clientscript/run.cs	/^	void Update () {$/;"	m	class:run	file:
+Update	clientscript/sc.cs	/^	void Update () {$/;"	m	class:sc	file:
+Update	clientscript/scale.cs	/^	void Update () $/;"	m	class:scale	file:
+VertSliderValue	clientscript/example.cs	/^	private float VertSliderValue = 0.5f;$/;"	f	class:example	file:
+VertSliderValue	clientscript/game0gui.cs	/^	private float VertSliderValue = 0.5f;$/;"	f	class:game0gui	file:
+VertSliderValue	clientscript/main_menu.cs	/^	private float VertSliderValue = 0.5f;$/;"	f	class:main_menu	file:
+Window0	clientscript/example.cs	/^	private bool Window0 = false;$/;"	f	class:example	file:
+Window0	clientscript/game0gui.cs	/^	private bool Window0 = true;$/;"	f	class:game0gui	file:
+Window1	clientscript/example.cs	/^	private bool  Window1 = true;$/;"	f	class:example	file:
+Window1	clientscript/main_menu.cs	/^	private bool  Window1 = true;$/;"	f	class:main_menu	file:
+__init__	gameserver.py	/^    def __init__(self,ge):$/;"	m	class:gameConnect
+__init__	gameserver.py	/^    def __init__(self,ge):$/;"	m	class:gameFactory
+__init__	gameserver.py	/^    def __init__(self,port):$/;"	m	class:gameEngine
+__init__	onair.py	/^    def __init__(self,iden,a=5000,theta=0,omega=0.1):$/;"	m	class:onairobj
+adapt	clientscript/scale.cs	/^    void adapt (float s) $/;"	m	class:scale	file:
+adaptSmoke	clientscript/scale.cs	/^    private void adaptSmoke(float s)$/;"	m	class:scale	file:
+adapt_angle	clientscript/RTSCameraCon.cs	/^	void adapt_angle()$/;"	m	class:RTSCameraCon	file:
+adapt_distance	clientscript/RTSCameraCon.cs	/^	void adapt_distance(float k_zoom)$/;"	m	class:RTSCameraCon	file:
+addAircraft	gameserver.py	/^    def addAircraft(self,name,air):$/;"	m	class:gameEngine
+aircluster	clientscript/connect.cs	/^	public static Dictionary<string,airobj> aircluster= new Dictionary<string,airobj>();$/;"	f	class:connect
+airobj	clientscript/airobj.cs	/^	public airobj(string name ,GameObject originairplane ,JsonData jd)$/;"	m	class:airobj
+airobj	clientscript/airobj.cs	/^public class airobj $/;"	c
+applyGameData	clientscript/connect.cs	/^    void applyGameData(JsonData data)$/;"	m	class:connect	file:
+armor	clientscript/example.cs	/^	public static float armor = 100f;$/;"	f	class:example
+auth	gameserver.py	/^    def auth(self,cert):$/;"	m	class:gameConnect
+authuser	gameserver.py	/^    def authuser(self,user,pwd):$/;"	m	class:gameConnect
+basei	clientscript/publicvar.cs	/^	public static int basei = 109650;$/;"	f	class:publicvar
+basej	clientscript/publicvar.cs	/^	public static int basej = 49050;$/;"	f	class:publicvar
+buffer	clientscript/connect.cs	/^    public byte[] buffer = new byte[BufferSize];$/;"	f	class:StateObject
+buildProtocol	gameserver.py	/^    def buildProtocol(self, addr):$/;"	m	class:gameFactory
+bul	clientscript/example.cs	/^	private float bul=1f;$/;"	f	class:example	file:
+bul	clientscript/game0gui.cs	/^	private float bul=1f;$/;"	f	class:game0gui	file:
+bul	clientscript/main_menu.cs	/^	private float bul=1f;$/;"	f	class:main_menu	file:
+bullets	clientscript/example.cs	/^	public static float bullets = 1f;$/;"	f	class:example
+camera	clientscript/loadres.cs	/^	public GameObject camera;$/;"	f	class:loadres
+clientSocket	clientscript/connect.cs	/^	Socket clientSocket;$/;"	f	class:connect	file:
+config	main.py	/^config = 0$/;"	v
+connect	clientscript/auth.cs	/^public class  connect: MonoBehaviour $/;"	c
+connect	clientscript/connect.cs	/^public class  connect: MonoBehaviour {$/;"	c
+connectRect	clientscript/main_menu.cs	/^	private Rect connectRect = new Rect (Screen.width-500, 10, 400, 300);$/;"	f	class:main_menu	file:
+connectionLost	gameserver.py	/^    def connectionLost(self,reason):$/;"	m	class:gameConnect
+connectionMade	gameserver.py	/^    def connectionMade(self):$/;"	m	class:gameConnect
+count	clientscript/connect.cs	/^	private int count = 0;$/;"	f	class:connect	file:
+dis	clientscript/RTSCameraCon.cs	/^	public float dis = 0;$/;"	f	class:RTSCameraCon
+distance	clientscript/RTSCamera.js	/^var distance = 500.0;$/;"	v
+distance	clientscript/RTSCameraCon.cs	/^	public float distance = 500.0f,zoomspeed = 0.5f;$/;"	f	class:RTSCameraCon
+distancemax	clientscript/RTSCamera.js	/^var distancemax=100000;$/;"	v
+distancemax	clientscript/RTSCameraCon.cs	/^	public float distancemax = 100000;$/;"	f	class:RTSCameraCon
+distancemini	clientscript/RTSCamera.js	/^var distancemini=20;$/;"	v
+distancemini	clientscript/RTSCameraCon.cs	/^	public float distancemini = 20;$/;"	f	class:RTSCameraCon
+do_auth	clientscript/connect.cs	/^	private void do_auth()$/;"	m	class:connect	file:
+emSize	clientscript/scale.cs	/^    public float emSize=5.0f;$/;"	f	class:scale
+emis	clientscript/scale.cs	/^    public float emis=25.0f;$/;"	f	class:scale
+example	clientscript/example.cs	/^public class example : MonoBehaviour {$/;"	c
+fai	clientscript/RTSCameraCon.cs	/^	private float fai = 0 , theta = 0;$/;"	f	class:RTSCameraCon	file:
+follow_position	clientscript/RTSCameraCon.cs	/^	void follow_position()$/;"	m	class:RTSCameraCon	file:
+game0gui	clientscript/game0gui.cs	/^public class game0gui : MonoBehaviour {$/;"	c
+gameConnect	gameserver.py	/^class gameConnect(LineReceiver):$/;"	c
+gameEngine	gameserver.py	/^class gameEngine():$/;"	c
+gameEngine	main.py	/^    from gameserver import gameEngine$/;"	i
+gameFactory	gameserver.py	/^class gameFactory(Factory):$/;"	c
+gameServerStart	gameserver.py	/^def gameServerStart(port,ge):$/;"	f
+gamedata	gameserver.py	/^    def gamedata(self):$/;"	m	class:gameEngine
+gamelog	clientscript/game0gui.cs	/^	public static void gamelog(string a)$/;"	m	class:game0gui
+get	oliviaweb/main.py	/^    def get(self):$/;"	m	class:HelloHandler
+go	clientscript/airobj.cs	/^	public GameObject go;$/;"	f	class:airobj
+health	clientscript/example.cs	/^	public static float health = 100f;$/;"	f	class:example
+heart	onair.py	/^    def heart(self,dt):$/;"	m	class:onairobj
+height	clientscript/game0gui.cs	/^	private int height = Screen.height \/2;	$/;"	f	class:game0gui	file:
+high	clientscript/scale.cs	/^    public float scalef=1.0f,high=10;$/;"	f	class:scale
+img	clientscript/game0gui.cs	/^	public Texture2D img;$/;"	f	class:game0gui
+init_game_server	main.py	/^def init_game_server(port="1026"):$/;"	f
+init_onair	main.py	/^def init_onair():$/;"	f
+init_web	main.py	/^    from oliviaweb.main import init_web$/;"	i
+init_web	oliviaweb/main.py	/^def init_web():$/;"	f
+init_webserver	main.py	/^def init_webserver():$/;"	f
+inred	gameserver.py	/^def inred( s ):$/;"	f
+inred	main.py	/^def inred( s ):$/;"	f
+ip_addr	clientscript/publicvar.cs	/^	public static string ip_addr = "127.0.0.1";$/;"	f	class:publicvar
+json	gameserver.py	/^import json$/;"	i
+json	main.py	/^import os,sys,json$/;"	i
+json	onair.py	/^import os,sys,json$/;"	i
+k_zoom	clientscript/RTSCameraCon.cs	/^	public static float k_zoom = 1.0f;$/;"	f	class:RTSCameraCon
+left	clientscript/game0gui.cs	/^	private int left = 0;$/;"	f	class:game0gui	file:
+lengthmesh	clientscript/publicvar.cs	/^	public static float lengthmesh = 2304.68f;$/;"	f	class:publicvar
+lineReceived	gameserver.py	/^    def lineReceived(self, line):$/;"	m	class:gameConnect
+load_config	main.py	/^def load_config(filepath):$/;"	f
+loadmap	clientscript/loadres.cs	/^	IEnumerator loadmap(int i , int j,Renderer renderer)$/;"	m	class:loadres	file:
+loadres	clientscript/loadres.cs	/^public class loadres: MonoBehaviour {$/;"	c
+loadwidth	clientscript/loadres.cs	/^	public int loadwidth = 100;$/;"	f	class:loadres
+loadwidth	clientscript/publicvar.cs	/^    public static int loadwidth = 20;$/;"	f	class:publicvar
+lockon	clientscript/RTSCameraCon.cs	/^	private static bool lockon = false;$/;"	f	class:RTSCameraCon	file:
+locx	clientscript/airobj.cs	/^	public float locx {get; set;}$/;"	p	class:airobj
+locy	clientscript/airobj.cs	/^	public float locy {get; set;}$/;"	p	class:airobj
+locz	clientscript/airobj.cs	/^	public float locz {get; set;}$/;"	p	class:airobj
+log	clientscript/game0gui.cs	/^	public static string log = "";$/;"	f	class:game0gui
+logWindow	clientscript/game0gui.cs	/^	void logWindow(int windowID)$/;"	m	class:game0gui	file:
+log_raw	clientscript/game0gui.cs	/^	public static string log_raw = "";$/;"	f	class:game0gui
+main_menu	clientscript/main_menu.cs	/^public class main_menu : MonoBehaviour {$/;"	c
+make_app	oliviaweb/main.py	/^def make_app():$/;"	f
+mappath	clientscript/loadres.cs	/^    string mappath(int i,int j)$/;"	m	class:loadres	file:
+mapurl	clientscript/loadres.cs	/^    string mapurl(int i,int j)$/;"	m	class:loadres	file:
+mySkin	clientscript/example.cs	/^	public GUISkin mySkin;$/;"	f	class:example
+mySkin	clientscript/game0gui.cs	/^	public GUISkin mySkin;$/;"	f	class:game0gui
+mySkin	clientscript/main_menu.cs	/^	public GUISkin mySkin;$/;"	f	class:main_menu
+name	clientscript/airobj.cs	/^	public string name;$/;"	f	class:airobj
+notloginproc	gameserver.py	/^    def notloginproc(self,line):$/;"	m	class:gameConnect
+omgea	clientscript/run.cs	/^    public float omgea = 0.1f;$/;"	f	class:run
+on	clientscript/game0gui.cs	/^	private int on =  Screen.height - Screen.height\/2;$/;"	f	class:game0gui	file:
+onairobj	main.py	/^from onair import onairobj$/;"	i
+onairobj	onair.py	/^class onairobj:$/;"	c
+online	clientscript/auth.cs	/^	public static bool online = false;$/;"	f	class:connect
+online	clientscript/connect.cs	/^	public static bool online = false;$/;"	f	class:connect
+opacity	clientscript/example.cs	/^	public static float opacity=1.0f;$/;"	f	class:example
+opacity	clientscript/game0gui.cs	/^	public static float opacity=1.0f;$/;"	f	class:game0gui
+opacity	clientscript/main_menu.cs	/^	public static float opacity=1.0f;$/;"	f	class:main_menu
+originairplane	clientscript/connect.cs	/^    public GameObject originairplane;$/;"	f	class:connect
+os	main.py	/^import os,sys,json$/;"	i
+os	onair.py	/^import os,sys,json$/;"	i
+passwd	clientscript/publicvar.cs	/^	public static string passwd = "qiaochu";$/;"	f	class:publicvar
+plane	clientscript/RTSCamera.js	/^var plane:GameObject;$/;"	v
+proc_res	clientscript/connect.cs	/^	private void proc_res(string resp)$/;"	m	class:connect	file:
+publicvar	clientscript/publicvar.cs	/^public class publicvar : MonoBehaviour {$/;"	c
+r0	clientscript/run.cs	/^    public float r0 = 6;$/;"	f	class:run
+reactor	gameserver.py	/^from twisted.internet import reactor$/;"	i
+reactor	main.py	/^    from twisted.internet import reactor$/;"	i
+reactor	main.py	/^from twisted.internet import reactor$/;"	i
+receiveDone	clientscript/connect.cs	/^	private static ManualResetEvent receiveDone =  new ManualResetEvent(false);$/;"	f	class:connect	file:
+roboGui	clientscript/example.cs	/^	public static bool roboGui=true;$/;"	f	class:example
+roboGui	clientscript/game0gui.cs	/^	public static bool roboGui=true;$/;"	f	class:game0gui
+roboGui	clientscript/main_menu.cs	/^	public static bool roboGui=true;$/;"	f	class:main_menu
+run	clientscript/run.cs	/^public class run : MonoBehaviour {$/;"	c
+run30hz	gameserver.py	/^    def run30hz(self):$/;"	m	class:gameConnect
+run_server	main.py	/^def run_server():$/;"	f
+sb	clientscript/connect.cs	/^    public StringBuilder sb = new StringBuilder();$/;"	f	class:StateObject
+sc	clientscript/sc.cs	/^public class sc : MonoBehaviour {$/;"	c
+scale	clientscript/scale.cs	/^public class scale : MonoBehaviour $/;"	c
+scalef	clientscript/scale.cs	/^    public float scalef=1.0f,high=10;$/;"	f	class:scale
+send	clientscript/connect.cs	/^	void send(string sendMessage)$/;"	m	class:connect	file:
+send_client	onair.py	/^    def send_client(self):$/;"	m	class:onairobj
+senddata	gameserver.py	/^    def senddata(self,mes=None,dictionary=None):$/;"	m	class:gameConnect
+set	onair.py	/^    def set(self,json):$/;"	m	class:onairobj
+setTarget	clientscript/RTSCameraCon.cs	/^	public static void setTarget(Transform tar)$/;"	m	class:RTSCameraCon
+setTargetx	clientscript/RTSCamera.js	/^function setTargetx(x)$/;"	f
+setTargety	clientscript/RTSCamera.js	/^function setTargety(y)$/;"	f
+setTargetz	clientscript/RTSCamera.js	/^function setTargetz(z)$/;"	f
+setuped	clientscript/loadres.cs	/^    public bool setuped = false;$/;"	f	class:loadres
+starttest	gameserver.py	/^    def starttest(self):$/;"	m	class:gameEngine
+sys	main.py	/^import os,sys,json$/;"	i
+sys	onair.py	/^import os,sys,json$/;"	i
+target	clientscript/RTSCameraCon.cs	/^	private static Transform target;$/;"	f	class:RTSCameraCon	file:
+tarx	clientscript/RTSCameraCon.cs	/^	public float tarx=0,tary=0,tarz=0;$/;"	f	class:RTSCameraCon
+tary	clientscript/RTSCamera.js	/^var tary=0;$/;"	v
+tary	clientscript/RTSCameraCon.cs	/^	public float tarx=0,tary=0,tarz=0;$/;"	f	class:RTSCameraCon
+tarz	clientscript/RTSCamera.js	/^var tarz=0;$/;"	v
+tarz	clientscript/RTSCameraCon.cs	/^	public float tarx=0,tary=0,tarz=0;$/;"	f	class:RTSCameraCon
+task	gameserver.py	/^from twisted.internet import task$/;"	i
+temp_data	clientscript/connect.cs	/^	public JsonData temp_data;$/;"	f	class:connect
+test	clientscript/connect.cs	/^    void test()$/;"	m	class:connect	file:
+test	gameserver.py	/^def test():$/;"	f
+theta	clientscript/RTSCameraCon.cs	/^	private float fai = 0 , theta = 0;$/;"	f	class:RTSCameraCon	file:
+theta	clientscript/run.cs	/^    private float theta = 0;$/;"	f	class:run	file:
+update	clientscript/airobj.cs	/^	public void update(JsonData jd)$/;"	m	class:airobj
+update30hz	gameserver.py	/^    def update30hz(self):$/;"	m	class:gameEngine
+url	oliviaweb/main.py	/^from tornado.web import RequestHandler, Application, url$/;"	i
+username	clientscript/publicvar.cs	/^	public static string username = "admin";$/;"	f	class:publicvar
+width	clientscript/game0gui.cs	/^	private int width = Screen.width \/4;	$/;"	f	class:game0gui	file:
+windowRect0	clientscript/example.cs	/^	private Rect windowRect0 = new Rect (Screen.width-500, 10, 480, 490);$/;"	f	class:example	file:
+windowRect0	clientscript/main_menu.cs	/^	private Rect windowRect0 = new Rect (Screen.width-500, 10, 480, 490);$/;"	f	class:main_menu	file:
+windowRect1	clientscript/example.cs	/^	private Rect windowRect1 = new Rect (50, 10, 450, 520);$/;"	f	class:example	file:
+windowRect1	clientscript/main_menu.cs	/^	private Rect windowRect1 = new Rect (50, 10, 400, 450);$/;"	f	class:main_menu	file:
+workSocket	clientscript/connect.cs	/^    public Socket workSocket = null;$/;"	f	class:StateObject
+xSpeed	clientscript/RTSCamera.js	/^var xSpeed = 25.0;$/;"	v
+xSpeed	clientscript/RTSCameraCon.cs	/^	public float xSpeed = 25.0f;$/;"	f	class:RTSCameraCon
+yMaxLimit	clientscript/RTSCamera.js	/^var yMaxLimit = 80;$/;"	v
+yMaxLimit	clientscript/RTSCameraCon.cs	/^	public float yMaxLimit = -20;$/;"	f	class:RTSCameraCon
+yMinLimit	clientscript/RTSCamera.js	/^var yMinLimit = -20;$/;"	v
+yMinLimit	clientscript/RTSCameraCon.cs	/^	public float yMinLimit = 80;$/;"	f	class:RTSCameraCon
+ySpeed	clientscript/RTSCamera.js	/^var ySpeed = 12.0;$/;"	v
+ySpeed	clientscript/RTSCameraCon.cs	/^	public float ySpeed = 12.0f;$/;"	f	class:RTSCameraCon
+yaw	clientscript/airobj.cs	/^    public float yaw {get;set;}$/;"	p	class:airobj
+zoomspeed	clientscript/RTSCamera.js	/^var zoomspeed=0.5;$/;"	v
+zoomspeed	clientscript/RTSCameraCon.cs	/^	public float distance = 500.0f,zoomspeed = 0.5f;$/;"	f	class:RTSCameraCon

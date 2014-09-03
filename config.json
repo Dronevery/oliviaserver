@@ -1,3 +1,4 @@
 {
-	"onairmethod":"random"
+	"onairmethod":"random",
+	"gameport":"1026"
 }

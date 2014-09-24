@@ -22,14 +22,12 @@ class gameConnect(LineReceiver):
             self.sendLine( json.dumps(dictionary) );
 
     def lineReceived(self, line):
-
         if not self.status:
             self.notloginproc(line)
         else:
             self.proc_line_online(line)
 
     def proc_line_online(self,line):
-
         try:
             cert = json.loads(line) 
             if cert["type"]=="status":

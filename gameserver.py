@@ -104,7 +104,6 @@ class gameConnect(LineReceiver):
 
 
     def notloginproc(self,line):
-        #print "Mes:"+line
         try:
             cert = json.loads(line) 
             if cert["type"]=="auth":

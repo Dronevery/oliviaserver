@@ -7,8 +7,11 @@ from twisted.internet import reactor
 from tornado.platform.twisted import TwistedIOLoop
 
 config = 0
-def inred( s ):
+
+
+def inred(s):
     return"%s[31;2m%s%s[0m"%(chr(27), s, chr(27))
+
 
 def load_config(filepath):
     try:
@@ -23,6 +26,7 @@ def load_config(filepath):
 
     return
 
+
 def init_onair():
     """
     Initialize On air device
@@ -31,27 +35,31 @@ def init_onair():
     #if config["onairmethod"]
     return
 
+
 def init_game_server(port="1026"):
     from gameserver import gameEngine
     ge = gameEngine(port)
     ge.starttest()
-
     return
+
+
 def init_webserver():
     TwistedIOLoop().install()
     from oliviaweb.main import init_web
     init_web()
-    
+
+
 def run_server():
     from twisted.internet import reactor
     reactor.run()
     return
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     """
     Main function for olivia server
     
-    argv:
+    ARGV:
         config path a json file
         default is config.json
     """

@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#encoding:utf-8
+# coding=utf-8
 
 import os,sys,json
 from onair import onairobj
@@ -27,20 +27,15 @@ def load_config(filepath):
     return
 
 
-def init_onair():
-    """
-    Initialize On air device
-    
-    """
-    #if config["onairmethod"]
-    return
+def init_onair_server(ge):
+    from onair import startair
+    startair(ge)
 
 
 def init_game_server(port="1026"):
     from gameserver import gameEngine
     ge = gameEngine(port)
-    ge.starttest()
-    return
+    return ge
 
 
 def init_webserver():
@@ -64,6 +59,7 @@ if __name__ == "__main__":
         default is config.json
     """
 
+
     #Load Config
     print """Hello,Commander
 Welcome Olivia Server Version 0.1"""
@@ -76,10 +72,9 @@ Welcome Olivia Server Version 0.1"""
     
         load_config(configpath)
     
-        
-        init_onair()
-    
-        init_game_server(config["gameport"])
+        ge = init_game_server(config["gameport"])
+
+        init_onair_server(ge)
 
         init_webserver()
     

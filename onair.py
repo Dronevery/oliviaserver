@@ -1,9 +1,14 @@
+# coding=utf-8
 import os,sys,json
 from twisted.internet import reactor
 from twisted.internet.protocol import Factory, Protocol
 from twisted.protocols.basic import LineReceiver
 from twisted.internet import task
 from math import *
+
+def inred( s ):
+    return"%s[31;2m%s%s[0m"%(chr(27), s, chr(27))
+
 
 class onairobj(LineReceiver):
     """This is a air obj
@@ -60,6 +65,7 @@ class onairobj(LineReceiver):
         prop = json.loads(line[:-1])
         for field in prop:
             self.prop[field] = prop[field]
+        print "here"
         return
 
     def notloginproc(self,line):
@@ -76,12 +82,17 @@ class onairobj(LineReceiver):
             print inst
             return 
 
-
     def connectionLost(self,reason):
         print "Connect Lose {0}".format (self.addr)
 
+
 class airobjFactory(Factory):
-    def __init__(self.ge):
+
+    def __init__(self, ge ):
         self.ge = ge
+
     def buildProtocol(self,addr):
         return onairobj(self.ge)
+
+def startair(ge):
+    reactor.listenTCP(4707,airobjFactory(ge))

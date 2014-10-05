@@ -43,6 +43,13 @@ class gameConnect(LineReceiver):
         self.status = False
         self.ge=ge
         self.delimiter = "$"
+        self.maxiden = 0
+
+
+    def nextiden(self):
+        self.maxiden += 1
+        return self.maxiden -1
+
 
     def connectionMade(self):
         resp = dict()

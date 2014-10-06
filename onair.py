@@ -25,7 +25,8 @@ class onairobj(LineReceiver):
         #添加到核心中
         self.ge = ge
         self.iden=ge.nextiden()
-        ge.addAircraft(self)
+        ge.addAircraft("name0",self)
+        self.delimiter = "$"
         
         #初始化属性
         self.prop = dict()
@@ -48,8 +49,9 @@ class onairobj(LineReceiver):
         resp = dict()
         resp["type"] = "auth";
         resp["data"] = "WELCOME";
-        self.senddata( dictionary=resp );
+        #self.senddata( dictionary=resp );
         self.addr = self.transport.getPeer()
+        print "On air Connect Made {0}".format (self.addr)
         return
 
     def lineReceived(self, line):
@@ -62,10 +64,20 @@ class onairobj(LineReceiver):
         """
             使用数据
         """
-        prop = json.loads(line[:-1])
-        for field in prop:
-            self.prop[field] = prop[field]
-        print "here"
+        try:
+            pp = json.loads(line)["data"]
+            prop = self.prop
+            prop["locx"] = float(pp["locx"])
+            prop["locy"] = float(pp["locy"])
+            prop["locz"] = float(pp["locz"])
+            prop["yaw"] = float(pp["yaw"])
+            prop["pitch"] = float(pp["pitch"])
+            prop["roll"] = float(pp["roll"])
+            print(pp)
+        except Exception as inst :
+            print inred("OnKnown Message on {0}:\n{1}".format(self.addr,pp) )
+            print inst
+
         return
 
     def notloginproc(self,line):
@@ -83,7 +95,7 @@ class onairobj(LineReceiver):
             return 
 
     def connectionLost(self,reason):
-        print "Connect Lose {0}".format (self.addr)
+        print "On air Connect Lose {0}".format (self.addr)
 
 
 class airobjFactory(Factory):

@@ -43,12 +43,6 @@ class gameConnect(LineReceiver):
         self.status = False
         self.ge=ge
         self.delimiter = "$"
-        self.maxiden = 0
-
-
-    def nextiden(self):
-        self.maxiden += 1
-        return self.maxiden -1
 
 
     def connectionMade(self):
@@ -150,14 +144,19 @@ class gameEngine():
         self.aircoll=dict()
         self.task30hz=task.LoopingCall(self.update30hz)
         self.task30hz.start(0.03)
+        self.maxiden = 0
 
     def addAircraft(self,name,air):
         #add aircraft
         self.aircoll[name]=air
+        print len(self.aircoll)
 
     def update30hz(self):
         dt = 0.03333
+
+    def test30(self):
         for a in self.aircoll:
+            dt = 0.033
             air=self.aircoll[a]
             air.heart(dt)
 
@@ -171,6 +170,10 @@ class gameEngine():
 
     def starttest(self):
         self.addAircraft("qiaochu",onairobj(01))
+
+    def nextiden(self):
+        self.maxiden += 1
+        return self.maxiden -1
 
 
 def test():

@@ -19,7 +19,8 @@ class gameConnect(LineReceiver):
         if mes:
             self.sendLine( mes );
         elif dictionary:
-            self.sendLine( json.dumps(dictionary) );
+            self.sendLine( json.dumps(dictionary) )
+            print  json.dumps(dictionary)
 
     def lineReceived(self, line):
         if not self.status:
@@ -47,9 +48,9 @@ class gameConnect(LineReceiver):
 
     def connectionMade(self):
         resp = dict()
-        resp["type"] = "auth";
-        resp["data"] = "WELCOME";
-        self.senddata( dictionary=resp );
+        resp["type"] = "auth"
+        resp["data"] = "WELCOME"
+        self.senddata( dictionary=resp )
         self.addr = self.transport.getPeer()
 
     def connectionLost(self,reason):

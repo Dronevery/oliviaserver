@@ -17,10 +17,9 @@ class gameConnect(LineReceiver):
 
     def senddata(self,mes=None,dictionary=None):
         if mes:
-            self.sendLine( mes );
+            self.sendLine( mes )
         elif dictionary:
             self.sendLine( json.dumps(dictionary) )
-            print  json.dumps(dictionary)
 
     def lineReceived(self, line):
         if not self.status:

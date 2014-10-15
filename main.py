@@ -28,8 +28,11 @@ def load_config(filepath):
 
 
 def init_onair_server(ge):
-    from onair import startair
-    startair(ge)
+    from mavonair import listenmav
+    from cj6 import listencj6
+    #listen from mav
+    listencj6(ge,4707)
+    listenmav(ge,4708)
 
 
 def init_game_server(port="1026"):
@@ -38,10 +41,13 @@ def init_game_server(port="1026"):
     return ge
 
 
-def init_webserver():
-    TwistedIOLoop().install()
-    from oliviaweb.main import init_web
-    init_web()
+def init_webserver(ge):
+    try:
+        from oliviaweb.main import init_webpanel
+        init_webpanel(config,ge)
+    except Exception as inst:
+        print >>sys.stderr,"Init web failed {0}".format(inst)
+        exit(-1)
 
 
 def run_server():
@@ -76,12 +82,13 @@ Welcome Olivia Server Version 0.1"""
 
         init_onair_server(ge)
 
-        init_webserver()
+        init_webserver(ge)
     
         #init_webserver()
     except Exception as inst :
-        print inred("Initialize Failed")
+        print >>sys.stderr,"Initialize Failed"
         print inst
+        exit(-1)
 
     print "Initialization Finished\nWaiting for connect"
 

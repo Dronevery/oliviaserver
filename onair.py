@@ -31,9 +31,9 @@ class onairobj(LineReceiver):
         #初始化属性
         self.prop = dict()
         prop=self.prop
-        prop["locx"]=0
-        prop["locy"]=0
-        prop["locz"]=0
+        prop["lon"]=0
+        prop["lat"]=0
+        prop["height"]=0
         prop["yaw"] = 0
         prop["yaw"] = 0
         prop["pitch"] = 0
@@ -47,8 +47,8 @@ class onairobj(LineReceiver):
             建立链接
         """
         resp = dict()
-        resp["type"] = "auth";
-        resp["data"] = "WELCOME";
+        resp["type"] = "auth"
+        resp["data"] = "WELCOM"
         #self.senddata( dictionary=resp );
         self.addr = self.transport.getPeer()
         print "On air Connect Made {0}".format (self.addr)
@@ -60,25 +60,6 @@ class onairobj(LineReceiver):
         else:
             self.proc_line_online(line)
 
-    def proc_line_online(self,line):
-        """
-            使用数据
-        """
-        try:
-            pp = json.loads(line)["data"]
-            prop = self.prop
-            prop["locx"] = float(pp["locx"])
-            prop["locy"] = float(pp["locy"])
-            prop["locz"] = float(pp["locz"])
-            prop["yaw"] = float(pp["yaw"])
-            prop["pitch"] = float(pp["pitch"])
-            prop["roll"] = float(pp["roll"])
-            print(pp)
-        except Exception as inst :
-            print inred("OnKnown Message on {0}:\n{1}".format(self.addr,pp) )
-            print inst
-
-        return
 
     def notloginproc(self,line):
         """
@@ -92,7 +73,10 @@ class onairobj(LineReceiver):
         except Exception as inst :
             print inred("OnKnown Message on {0}".format(self.addr) )
             print inst
-            return 
+            return
+
+    def proc_line_online(self,line):
+        pass
 
     def connectionLost(self,reason):
         print "On air Connect Lose {0}".format (self.addr)
@@ -100,11 +84,10 @@ class onairobj(LineReceiver):
 
 class airobjFactory(Factory):
 
-    def __init__(self, ge ):
+    def __init__(self, ge,onair ):
         self.ge = ge
+        self.onair = onair
 
     def buildProtocol(self,addr):
-        return onairobj(self.ge)
+        return self.onair(self.ge)
 
-def startair(ge):
-    reactor.listenTCP(4707,airobjFactory(ge))

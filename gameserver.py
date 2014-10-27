@@ -36,7 +36,8 @@ class gameConnect(LineReceiver):
         except Exception as inst :
             print inred("OnKnown Message on {0}".format(self.addr) )
             print inst
-            return 
+            print line
+            return
 
     def __init__(self,ge):
         self.l =  task.LoopingCall(self.run30hz)
@@ -101,24 +102,25 @@ class gameConnect(LineReceiver):
         except Exception as inst :
             print inred("OnKnown Message on {0}".format(self.addr) )
             print inst
-            return 
+            return
 
 
     def notloginproc(self,line):
         try:
             cert = json.loads(line) 
-            if cert["type"]=="auth":
+            if cert["event"]=="auth":
                 self.auth(cert)
 
         except Exception as inst :
             print inred("OnKnown Message on {0}".format(self.addr) )
             print inst
+            print line
             return 
 
 
     def run30hz(self):
         data = dict()
-        data["type"] = "gamedata"
+        data["event"] = "gamedata"
         data["data"] = self.ge.gamedata()
         self.senddata(dictionary = data)
         #print json.dumps(data)

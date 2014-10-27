@@ -31,13 +31,12 @@ class onairobj(LineReceiver):
         #初始化属性
         self.prop = dict()
         prop=self.prop
-        prop["lon"]=0
-        prop["lat"]=0
-        prop["height"]=0
-        prop["yaw"] = 0
-        prop["yaw"] = 0
-        prop["pitch"] = 0
-        prop["roll"] = 0
+        prop["lon"]=0.01
+        prop["lat"]=0.01
+        prop["height"]=0.01
+        prop["yaw"] = 0.01
+        prop["pitch"] = 0.01
+        prop["roll"] = 0.01
         self.status = True
 
         return 

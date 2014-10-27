@@ -55,6 +55,8 @@ def run_server():
     reactor.run()
     return
 
+#import pydevd
+#pydevd.settrace('222.195.93.253', port=7074, stdoutToServer=True, stderrToServer=True)
 
 if __name__ == "__main__":
     """

@@ -26,11 +26,12 @@ class mavonair(onairobj):
             print >>sys.stderr , "Error {0} while parse {1}".format(inst,line)
             return
         self.runevent(type,data)
+        self.sendLine(line)
 
     def update_pos(self,data):
         prop = self.prop
         prop['lon'] = float(data['lon']) /10000000
-        prop['lat'] = float(data['lon']) /10000000
+        prop['lat'] = float(data['lat']) /10000000
         prop['height'] = float(data['alt']) /1000
         prop['vx'] = float(data['vx'])
         prop['vy'] = float(data['vy'])

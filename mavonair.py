@@ -1,32 +1,14 @@
 from onair import *
 import json
 import  sys
+import eventbase
 
-class mavonair(onairobj):
+class mavonair(onairobj,eventbase):
     def __init__(self,ge):
         onairobj.__init__(self,ge)
-        self.funclist = dict()
         self.addevent("GLOBAL_POSITION_INT",self.update_pos)
-    def runevent(self,event,data):
-        if event in self.funclist:
-            self.funclist[event] (data)
-        else:
-            print >>sys.stderr,"No SUCH EVENT {0}".format(event)
-
-    def addevent(self,event,func):
-        self.funclist[event] = func
-
-    def proc_line_online(self,line):
-        #print line
-        try:
-            res = json.loads(line)
-            type = res['type']
-            data = res['data']
-        except Exception as inst :
-            print >>sys.stderr , "Error {0} while parse {1}".format(inst,line)
-            return
-        self.runevent(type,data)
-        self.sendLine(line)
+        self.addevent("ATTITUDE",self.update_att)
+        self.addevent('arm',self.arm)
 
     def update_pos(self,data):
         prop = self.prop
@@ -36,6 +18,21 @@ class mavonair(onairobj):
         prop['vx'] = float(data['vx'])
         prop['vy'] = float(data['vy'])
         prop['vz'] = float(data['vz'])
+
+    def update_att(self,data):
+        prop= self.prop
+        prop['roll'] =  float(data['roll'])
+        prop['pitch'] =  float(data['pitch'])
+        prop['yaw'] =  float(data['yaw'])
+    def arm(self,data):
+        res= dict()
+        res['type'] = "arm"
+        res['action']=data
+
+
+    def action(self,data):
+        print "recive action:{0}".format(data)
+        self.runevent(data['type'],data['action'])
 
 def listenmav(ge,port):
     reactor.listenTCP(port,airobjFactory(ge,mavonair))

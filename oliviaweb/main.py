@@ -6,6 +6,7 @@ import tornado.template as template
 from tornado.platform.twisted import TwistedIOLoop
 from twisted.internet import task
 import json
+import sys
 
 
 class MainHandler(tornado.web.RequestHandler):
@@ -35,14 +36,36 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
         global sendfunc
         sendfunc = self.send
         self.hearttask = task.LoopingCall(self.heartbeat)
+        self.funclist = dict()
 
+        self.addevent("actiononair",self.actiononair())
+
+    def runevent(self,event,data):
+        if event in self.funclist:
+            self.funclist[event] (data)
+        else:
+            print >>sys.stderr,"No SUCH EVENT {0}".format(event)
+
+    def addevent(self,event,func):
+        self.funclist[event] = func
+
+    def proc_line_online(self,line):
+        #print line
+        try:
+            res = json.loads(line)
+            type = res['type']
+            data = res['data']
+        except Exception as inst :
+            print >>sys.stderr , "Error {0} while parse {1}".format(inst,line)
+            return
+        self.runevent(type,data)
 
     def open(self):
         print "Websocket Conneted"
         self.hearttask.start(0.1)
 
     def on_message(self, message):
-        print u"You said: " + message
+        self.proc_line_online(message)
 
     def on_close(self):
         print "WebSocket closed"
@@ -59,6 +82,11 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
     def heartbeat(self):
         str = self.ge.gamedata()
         self.send ("gamedata" , str)
+
+    def actiononair(self,data):
+        name = data['name']
+        self.ge.aircoll[name].action(data)
+
 
 def init_webpanel(config,ge):
     TwistedIOLoop().install()

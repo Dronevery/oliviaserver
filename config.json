@@ -1,5 +1,7 @@
 {
 	"onairmethod":"random",
 	"gameport":"1026",
-    "iden":0
+
+    "iden":0,
+    "err":"maverr.log"
 }

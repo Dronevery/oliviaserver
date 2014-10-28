@@ -23,7 +23,8 @@ def load_config(filepath):
 
     global config
     config = json.loads(fstr)
-
+    if config['err'] != "DEBUG":
+        sys.stderr = open(config['err'],"w")
     return
 
 
